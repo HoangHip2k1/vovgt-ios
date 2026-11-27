@@ -1,0 +1,30 @@
+name: VOVGiaoThong
+options:
+  bundleIdPrefix: vn.vovgt
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: 5.9
+    PRODUCT_BUNDLE_IDENTIFIER: vn.vovgt.ios
+    TARGETED_DEVICE_FAMILY: "1"
+    INFOPLIST_KEY_CFBundleDisplayName: "VOV Giao Thông+"
+    GENERATE_INFOPLIST_FILE: YES
+targets:
+  VOVGiaoThong:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: Resources
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_NAME: "VOV Giao Thông+"
+    info:
+      path: Info.plist
+      properties:
+        UIBackgroundModes:
+          - audio
+        UIApplicationSupportsIndirectInputEvents: YES
